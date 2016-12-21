@@ -17,7 +17,7 @@ else {
             exit("Данный логин уже существует. Введите другое имя пользователя.<br /> <a href = $config->address>Вернуться на главную</a>");
         }
     }
-    $db->insert("users", array('login'=>$login, 'password'=>$password));
+	$db->insert("users", array('login'=>$login, 'password'=>$password));
     header("Location: $config->address");
     exit;
 }

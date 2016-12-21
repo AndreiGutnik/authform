@@ -1,9 +1,9 @@
 <?php
 class Config{
-    var $sitename="Test";
-    var $address="http://localhost/db_sql/";
+    var $sitename="AuthForm";
+    var $address="http://localhost/authform/";
     var $secret="dog999";
-    var $db="test";
+    var $db="list";
     var $host="localhost";
     var $db_prefix="tp_";
     var $user="andrei";

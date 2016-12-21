@@ -50,7 +50,7 @@ class DataBase{
             } else {
                 $query = "SELECT $fields FROM $table_name $order $limit";
             }
-        }
+        }		
         $result_set=$this->query($query);
         if(!$result_set) return false;
         $i=0;
@@ -72,7 +72,6 @@ class DataBase{
         foreach($new_values as $value) $query.="'".addslashes($value)."',";
         $query=substr($query, 0, -1);
         $query.=")";
-        //echo $query;
         return $this->query($query);
     }
 }

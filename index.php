@@ -1,40 +1,29 @@
 <?php
 session_start();
-/*require_once "lib/database_class.php";
-require_once "lib/config_class.php";
-
-$config = new Config();
-$db = new DataBase();
-
-$data=$db->select("employ", array('name', 'sex', 'code', 'title'), "dep", "employ.id_dep=dep.id");
-for($i=0; $i<count($data); $i++){
-    echo $data[$i]['name']." ".$data[$i]['sex']." ".$data[$i]['code']." ".$data[$i]['title']."<br />";
-}*/
 ?>
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Главная страница сайта</title>
+    <title>Форма авторизации</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<meta name="description" content="Описание" />
     <meta name="keywords" content="Ключевые слова" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <!-- <script type="text/javascript" src="js/jquery.form.js"></script> -->
 </head>
 <body>
     <h2>Авторизация</h2>
     <form action="auth.php" method="POST">
         <p>
-            <label>Ваш логин:<br />
-            <input name="login" type="text" size="15" maxlength="15"></label>
+            <label for="login">Ваш логин:</label><br />
+            <input id="login" name="login" type="text" size="15" maxlength="15">
+            <span></span>
         </p>
         <p>
-            <label>Ваш пароль:<br />
-            <input name="password" type="password" size="15" maxlength="15"></label>
+            <label for="password">Ваш пароль:</label><br />
+            <input id="password" name="password" type="password" size="15" maxlength="15">
+            <span></span>
         </p>
         <p>
-            <input type="submit" name="submit" value="Войти">
-            <br />
+            <input id="submit" type="submit" name="submit" value="Войти" disabled><br />
             <a href="reg.php">Зарегистрироваться</a>
         </p>
     </form>
